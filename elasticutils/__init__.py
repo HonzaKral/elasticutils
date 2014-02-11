@@ -27,8 +27,8 @@ QUERY_ACTION_MAP = {
     'terms': 'terms',
     'startswith': 'prefix',  # Backwards compatability
     'prefix': 'prefix',
-    'text': 'text',
-    'text_phrase': 'text_phrase',
+    'text': 'match',
+    'text_phrase': 'match_phrase',
     'match': 'match',  # ES 0.19.9 renamed text to match
     'match_phrase': 'match_phrase',
     'wildcard': 'wildcard',

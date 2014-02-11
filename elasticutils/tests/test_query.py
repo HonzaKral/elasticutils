@@ -356,9 +356,9 @@ class QueryTest(ESTestCase):
                 'query': {
                     'bool': {
                         'must': [
-                            {'text_phrase': {'foo': {'query': 'car', 'boost': 4.0}}},
+                            {'match_phrase': {'foo': {'query': 'car', 'boost': 4.0}}},
                             {'term': {'foo': {'value': 'car', 'boost': 4.0}}},
-                            {'text': {'foo': {'query': 'car', 'boost': 4.0}}}
+                            {'match': {'foo': {'query': 'car', 'boost': 4.0}}}
                         ]
                     }
                 }
@@ -378,9 +378,9 @@ class QueryTest(ESTestCase):
                 'query': {
                     'bool': {
                         'must': [
-                            {'text_phrase': {'foo': {'query': 'car', 'boost': 4.0}}},
+                            {'match_phrase': {'foo': {'query': 'car', 'boost': 4.0}}},
                             {'term': {'foo': {'value': 'car', 'boost': 4.0}}},
-                            {'text': {'foo': {'query': 'car', 'boost': 4.0}}}
+                            {'match': {'foo': {'query': 'car', 'boost': 4.0}}}
                         ]
                     }
                 }
