@@ -27,12 +27,18 @@ QUERY_ACTION_MAP = {
     'terms': 'terms',
     'startswith': 'prefix',  # Backwards compatability
     'prefix': 'prefix',
-    'text': 'match',
-    'text_phrase': 'match_phrase',
-    'match': 'match',  # ES 0.19.9 renamed text to match
+    'match': 'match',  
     'match_phrase': 'match_phrase',
     'wildcard': 'wildcard',
-    'fuzzy': 'fuzzy'}
+    'fuzzy': 'fuzzy',
+
+    # ES 0.19.9 renamed text to match, in ES 1.0 text was removed, using match
+    # instead since the functionality is identical. These options are
+    # deprecated and will be removed in future release
+    'text': 'match',
+    'text_phrase': 'match_phrase',
+}
+
 
 
 #: List of text/match actions.

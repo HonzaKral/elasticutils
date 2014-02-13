@@ -22,6 +22,10 @@ Version 0.9: In development
 
 **API-breaking changes:**
 
+* ``__text`` and ``__text_phrase`` queries are now deprecated, use ``__match``
+  and ``__match_phrase`` instead. In next release of ElasticUtils the
+  deprecated options will be removed.
+
 * **elasticsearch-py v0.4.3 or later now required.**
 
   ElasticUtils now uses elasticsearch-py.
